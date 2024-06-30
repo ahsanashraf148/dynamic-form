@@ -3,6 +3,7 @@ import * as yup from "yup";
 export const BusinessSchema = yup.object().shape({
   companyName: yup
     .string()
+    .min(2, "Company Name is too short")
     .required("Company Name is required"),
   businessEmail: yup
     .string()
@@ -10,6 +11,7 @@ export const BusinessSchema = yup.object().shape({
     .required("Business Email is required"),
   contactPerson: yup
     .string()
+    .min(2, "Contact Person is too short")
     .required("Contact Person is required"),
   phoneNumber: yup
     .string()
@@ -47,5 +49,5 @@ export const CustomerSchema = yup.object().shape({
     .required("Gender is required"),
   subscribeNewsletter: yup
     .boolean()
-    .oneOf([true], "Please subscribe to our newsletter"),
+    .oneOf([true], "Please accept the cookies"),
 });

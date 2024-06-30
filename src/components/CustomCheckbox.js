@@ -2,6 +2,7 @@ import { useField } from "formik";
 import CustomError from "./Error";
 
 const CustomCheckbox = ({ label, ...props }) => {
+
   const [field, meta] = useField(props);
 
   return (
@@ -12,11 +13,12 @@ const CustomCheckbox = ({ label, ...props }) => {
           {...props}
           className={meta.touched && meta.error ? "input-error" : ""}
         />
-        <span>I accept the terms of service</span>
+        <span>Accept all cookies</span>
       </div>
 
       {meta.touched && meta.error && <CustomError touched={meta.touched} error={meta.error}/>}
     </>
   );
 };
+
 export default CustomCheckbox;

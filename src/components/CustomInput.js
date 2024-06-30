@@ -2,6 +2,7 @@ import { useField } from "formik";
 import CustomError from "./Error";
 
 const CustomInput = ({ label, ...props }) => {
+
   const [field, meta] = useField(props);
 
   return (
@@ -16,4 +17,5 @@ const CustomInput = ({ label, ...props }) => {
     </>
   );
 };
+
 export default CustomInput;
