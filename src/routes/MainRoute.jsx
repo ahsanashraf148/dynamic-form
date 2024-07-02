@@ -15,6 +15,7 @@ const MainRoute = () => {
   return (
     <BrowserRouter>
     <Navbar/>
+    <h1>Dynamic Forms</h1>
       <Routes>
         <Route path={CONSTANT_ROUTES.ROUTE_CUSTOMER} element={<Customer />} />
         <Route path={CONSTANT_ROUTES.ROUTE_BUSINESS} element={<Business />} />

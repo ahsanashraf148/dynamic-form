@@ -8,11 +8,7 @@ const CustomInput = ({ label, ...props }) => {
   return (
     <>
       <label>{label}</label>
-      <input
-        {...field}
-        {...props}
-        className={meta.touched && meta.error ? "input-error" : ""}
-      />
+      <input {...field} {...props} className={meta.touched && meta.error ? "input-error" : ""} />
       {meta.touched && meta.error && <CustomError touched={meta.touched} error={meta.error}/>}
     </>
   );
